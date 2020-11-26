@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block content %} 
+{% block content %}
     <div class="content-section">
       <div class="media">
         <img class="rounded-circle account-img" src="{{ image_file }}">
@@ -21,7 +21,7 @@
                             {% for error in form.username.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
-                        </div> 
+                        </div>
                     {% else %}
                         {{ form.username(class="form-control form-control-lg") }}
                     {% endif %}
@@ -34,7 +34,7 @@
                             {% for error in form.email.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
-                        </div> 
+                        </div>
                     {% else %}
                         {{ form.email(class="form-control form-control-lg") }}
                     {% endif %}
@@ -44,15 +44,14 @@
                     {{ form.picture(class="form-control-file") }}
                     {% if form.picture.errors %}
                         {% for error in form.picture.errors %}
-                               <span class="text-danger">{{ error }}</span></br>
+                            <span class="text-danger">{{ error }}</span></br>
                         {% endfor %}
                     {% endif %}
                 </div>
             </fieldset>
-               <div class="form-group">
-                   {{ form.submit(class="btn btn-outline-info") }}
-               </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
         </form>
     </div>
 {% endblock content %}
-
