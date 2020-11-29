@@ -7,5 +7,5 @@ class Config:
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = 'chongmeng.ong@graduate.utm.my'
-    MAIL_PASSWORD = 'A1b2C3d4E5'
+    MAIL_USERNAME = os.environ.get('EMAIL_USER')
+    MAIL_PASSWORD = os.environ.get('EMAIL_PASS')
